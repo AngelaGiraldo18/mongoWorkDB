@@ -1,0 +1,25 @@
+// set-product.mongodb
+
+use("pet_store")
+
+db.products.updateMany(
+ {},[
+  // query
+  {_id: 1},
+  // change => operators
+  {
+    $set: {
+      name: 'Change name',
+      price: 3000,
+    }
+  },
+  {_id: 2},
+  // change => operators
+  {
+    $set: {
+      name: 'Change angela',
+      price: 4000,
+    }
+  }
+]
+)
