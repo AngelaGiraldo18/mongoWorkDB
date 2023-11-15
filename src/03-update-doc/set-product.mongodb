@@ -2,24 +2,140 @@
 
 use("pet_store")
 
+//logica para seleccionar uno por uno y altualizarle los datos 
+db.products.updateOne(
+    // query
+    {_id: 1},
+    // change => operators
+    {
+      $set: {
+        name: 'Change hola',
+        price: 3000,
+      }
+    }
+  )
+  
+  db.products.updateOne(
+      // query
+      {_id: 2},
+      // change => operators
+      {
+        $set: {
+          name: 'Angela Maria',
+          price: 2000,
+        }
+      }
+  )
+  
+  db.products.updateOne(
+      // query
+      {_id: 3},
+      // change => operators
+      {
+        $set: {
+          name: 'Pola',
+          price: 100,
+        }
+      }
+  )
+  
+  db.products.updateOne(
+      // quey
+      {_id: 4},
+      // change => operators
+      {
+        $set: {
+          name: 'Pañoleta',
+          price: 5000,
+        }
+      }
+  )
+  
+  db.products.updateOne(
+      // query
+      {_id: 5},
+      // change => operators
+      {
+        $set: {
+          name: 'Collar',
+          price: 4000,
+        }
+      }
+  )
+  
+  db.products.updateOne(
+      // query
+      {_id: 6},
+      // change => operators
+      {
+        $set: {
+          name: 'Cuido',
+          price: 100000,
+        }
+      }
+  )
+  
+  db.products.updateOne(
+      // query
+      {_id: 7},
+      // change => operators
+      {
+        $set: {
+          name: 'Vestido',
+          price: 50,
+        }
+      }
+  )
+  
+  db.products.updateOne(
+      // query
+      {_id: 8},
+      // change => operators
+      {
+        $set: {
+          name: 'Mesa',
+          price: 2000,
+        }
+      }
+  )
+  
+  db.products.updateOne(
+      // query
+      {_id: 9},
+      // change => operators
+      {
+        $set: {
+          name: ' Correa',
+          price: 100,
+        }
+      }
+  )
+  
+  db.products.updateOne(
+      // query
+      {_id: 10},
+      // change => operators
+      {
+        $set: {
+          name: 'Croquetas',
+          price: 1700,
+        }
+      }
+  )
+
+
+//O cambiar  todos los datos por uno solo pero el id se mantiene
+
+/*
 db.products.updateMany(
- {},[
-  // query
-  {_id: 1},
-  // change => operators
-  {
-    $set: {
-      name: 'Change name',
-      price: 3000,
-    }
-  },
-  {_id: 2},
-  // change => operators
-  {
-    $set: {
-      name: 'Change angela',
-      price: 4000,
-    }
-  }
-]
-)
+    {}, // Filtro vacío para seleccionar todos los documentos
+    [
+      {
+        $set: {
+          name: 'Hola instru',
+          price: 4000,
+        }
+      }
+    
+    ]
+)*/
